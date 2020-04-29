@@ -19,6 +19,9 @@ export namespace Components {
     'type': 'button' | 'reset' | 'submit';
     'variant': 'outlined' | 'contained';
   }
+  interface AuiPaper {
+    'defaultStyle': 'card';
+  }
   interface MyButton {
     'label': string;
   }
@@ -47,6 +50,12 @@ declare global {
     new (): HTMLAuiButtonElement;
   };
 
+  interface HTMLAuiPaperElement extends Components.AuiPaper, HTMLStencilElement {}
+  var HTMLAuiPaperElement: {
+    prototype: HTMLAuiPaperElement;
+    new (): HTMLAuiPaperElement;
+  };
+
   interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {}
   var HTMLMyButtonElement: {
     prototype: HTMLMyButtonElement;
@@ -60,6 +69,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'aui-button': HTMLAuiButtonElement;
+    'aui-paper': HTMLAuiPaperElement;
     'my-button': HTMLMyButtonElement;
     'my-component': HTMLMyComponentElement;
   }
@@ -75,6 +85,9 @@ declare namespace LocalJSX {
     'size'?: 'small' | 'default' | 'large';
     'type'?: 'button' | 'reset' | 'submit';
     'variant'?: 'outlined' | 'contained';
+  }
+  interface AuiPaper {
+    'defaultStyle'?: 'card';
   }
   interface MyButton {
     'label'?: string;
@@ -97,6 +110,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'aui-button': AuiButton;
+    'aui-paper': AuiPaper;
     'my-button': MyButton;
     'my-component': MyComponent;
   }
@@ -109,6 +123,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'aui-button': LocalJSX.AuiButton & JSXBase.HTMLAttributes<HTMLAuiButtonElement>;
+      'aui-paper': LocalJSX.AuiPaper & JSXBase.HTMLAttributes<HTMLAuiPaperElement>;
       'my-button': LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
       'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
     }

@@ -3,11 +3,11 @@ import { CssClassMap } from '../../utils';
 
 @Component({
   tag: 'aui-button',
-  styleUrl: 'aui-button.scss',
+  styleUrl: 'button.scss',
   shadow: true,
 })
 
-export class AuiButton {
+export class Button {
 
   @Event() clickEvent: EventEmitter;
 

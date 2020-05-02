@@ -1,0 +1,16 @@
+{
+  "entries": [
+    "components/button/button.js",
+    "components/collapse/collapse.js",
+    "components/input/input.js",
+    "components/paper/paper.js",
+    "components/text/text.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.8.4",
+    "typescriptVersion": "3.7.2"
+  },
+  "collections": [],
+  "bundles": []
+}

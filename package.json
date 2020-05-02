@@ -1,5 +1,5 @@
 {
-  "name": "awesome-ui",
+  "name": "awesome-ui-components",
   "version": "0.0.1",
   "description": "Awesome UI Component",
   "author": "Ravi Mishra",
@@ -10,7 +10,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/awesome-ui/awesome-ui.js",
+  "unpkg": "dist/awesome-ui-components/awesome-ui-components.js",
   "files": [
     "dist/",
     "loader/"

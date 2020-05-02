@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "../../styles/theme.scss";
 
 :host {
   box-sizing: border-box;
@@ -13,7 +13,7 @@ button {
   font-family: $font-family;
   cursor: pointer;
   border: none;
-  background-color: $blue-steel;
+  background-color: $primary-color;
   color: $white;
   line-height: 20px;
   font-size: 14px;
@@ -24,10 +24,10 @@ button {
   outline: none;
 
   &:hover {
-    background-color: $blue-steel-dark;
+    background-color: $primary-color-dark;
   }
   &:active {
-    background-color: darken($blue-steel-dark, 10%);
+    background-color: darken($primary-color-dark, 10%);
   }
   &:disabled {
     opacity: 0.4;
@@ -35,13 +35,13 @@ button {
 
   // Color variations
   &.accent {
-    background-color: $coral;
+    background-color: $secondary-color;
 
     &:hover {
-      background-color: $coral-dark;
+      background-color: $secondary-color-dark;
     }
     &:active {
-      background-color: darken($coral-dark, 10%);
+      background-color: darken($secondary-color-dark, 10%);
     }
   }
   &.light {

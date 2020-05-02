@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'aui-input',
@@ -7,12 +7,22 @@ import { Component, h } from '@stencil/core';
 })
 export class Input {
 
+  @Prop() value: string ="";
+
+  @Prop() placeholder: string ="Placeholder";
+
+  @Prop() label: string ="Label";
+
+  handleChange(event) {
+    this.value = event.target.value;
+  }
+
   render() {
     return (
-      <div class="material">
-        <input type="text" placeholder="John Doe" autocomplete="off" required />
+      <div class="material-input">
+        <input type="text" placeholder={this.placeholder} autocomplete="off" required value={this.value} onInput={(event) => this.handleChange(event)}/>
         <hr/>
-          <label>First Name</label>
+          <label>{this.label}</label>
 	  </div>
     );
   }

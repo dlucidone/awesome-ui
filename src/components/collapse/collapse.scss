@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "../../styles/theme.scss";
 
 .accordions {
   font-family: $font-family;
@@ -19,7 +19,7 @@
 }
 
 .accordion-item .accordion-title.active-title {
-  background-color: $blue-steel;
+  background-color: $primary-color;
   color:$white;
 }
 

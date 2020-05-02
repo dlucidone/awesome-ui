@@ -1,6 +1,6 @@
-@import "../../styles/variables.scss";
+@import "../../styles/theme.scss";
 
-.material {
+.material-input {
 	position: relative;
 	padding: 0;
 	margin: 5px;
@@ -38,7 +38,7 @@
 		width: 100%;
 		height: 2px;
 		border: none;
-		background: $blue-steel;
+		background: $primary-color;
 		font-size: 1px;
 		will-change: transform, visibility;
 		transition: all 200ms ease-out;
@@ -56,7 +56,7 @@
 		top: 10px;
 		left: 10px;
 		font-size: 120%;
-		color: $blue-steel;
+		color: $primary-color;
 		transform-origin: 0 -150%;
 		transition: transform 300ms ease;
 		pointer-events: none;

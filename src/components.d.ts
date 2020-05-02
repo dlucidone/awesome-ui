@@ -25,7 +25,11 @@ export namespace Components {
     'label': string;
     'width': string;
   }
-  interface AuiInput {}
+  interface AuiInput {
+    'label': string;
+    'placeholder': string;
+    'value': string;
+  }
   interface AuiPaper {
     'defaultStyle': string;
   }
@@ -94,7 +98,11 @@ declare namespace LocalJSX {
     'onOnToggle'?: (event: CustomEvent<any>) => void;
     'width'?: string;
   }
-  interface AuiInput {}
+  interface AuiInput {
+    'label'?: string;
+    'placeholder'?: string;
+    'value'?: string;
+  }
   interface AuiPaper {
     'defaultStyle'?: string;
   }

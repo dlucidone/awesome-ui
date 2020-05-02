@@ -2,11 +2,8 @@
 
 # Awesome UI Web Components 
 
-Show me in action
+Show me in action - https://dlucidone.github.io/awesome-ui
 
-```
-https://dlucidone.github.io/awesome-ui
-```
 
 How to use - 
 

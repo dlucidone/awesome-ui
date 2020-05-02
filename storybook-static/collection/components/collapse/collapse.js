@@ -2,6 +2,8 @@ import { h } from "@stencil/core";
 export class Collapse {
     constructor() {
         this.toggle = false;
+        this.label = "Title";
+        this.description = "Description";
     }
     toggleComponent() {
         this.toggle = !this.toggle;
@@ -12,10 +14,11 @@ export class Collapse {
             h("div", { class: "accordion-item" },
                 h("div", { class: `accordion-title ${this.toggle ? 'active-title' : ''}`, "data-tab": "item1", onClick: () => this.toggleComponent() },
                     h("h2", null,
-                        "Accordion 1 ",
+                        this.label,
+                        " ",
                         this.toggle ? h("span", null, "\u25B2") : h("span", null, "\u25BC"))),
                 h("div", { class: `accordion-content ${this.toggle ? 'active' : ''}`, id: "item1" },
-                    h("p", null, "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.")))));
+                    h("p", null, this.description)))));
     }
     static get is() { return "aui-collapse"; }
     static get encapsulation() { return "shadow"; }
@@ -41,7 +44,8 @@ export class Collapse {
                 "text": ""
             },
             "attribute": "label",
-            "reflect": false
+            "reflect": false,
+            "defaultValue": "\"Title\""
         },
         "description": {
             "type": "string",
@@ -58,7 +62,8 @@ export class Collapse {
                 "text": ""
             },
             "attribute": "description",
-            "reflect": false
+            "reflect": false,
+            "defaultValue": "\"Description\""
         },
         "width": {
             "type": "string",

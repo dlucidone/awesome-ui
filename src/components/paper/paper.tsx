@@ -9,7 +9,7 @@ import { CssClassMap } from '../../utils';
 export class Paper {
 
   @Prop()
-  defaultStyle: 'card' = 'card'
+  defaultStyle: string = 'card'
   
   private getCssClassMap(): CssClassMap {
     return {

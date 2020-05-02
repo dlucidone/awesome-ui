@@ -19,25 +19,19 @@ export namespace Components {
     'type': 'button' | 'reset' | 'submit';
     'variant': 'outlined' | 'contained';
   }
-  interface AuiPaper {
-    'defaultStyle': 'card';
-  }
-  interface MyButton {
+  interface AuiCollapse {
+    'color': string;
+    'description': string;
     'label': string;
+    'width': string;
   }
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface AuiInput {}
+  interface AuiPaper {
+    'defaultStyle': string;
+  }
+  interface AuiText {
+    'label': string;
+    'variant': 'h1' | 'h2' | 'h3' | 'h4' | 'headline' | 'title' | 'subheading' | 'body2' | 'body1' | 'caption';
   }
 }
 
@@ -50,28 +44,35 @@ declare global {
     new (): HTMLAuiButtonElement;
   };
 
+  interface HTMLAuiCollapseElement extends Components.AuiCollapse, HTMLStencilElement {}
+  var HTMLAuiCollapseElement: {
+    prototype: HTMLAuiCollapseElement;
+    new (): HTMLAuiCollapseElement;
+  };
+
+  interface HTMLAuiInputElement extends Components.AuiInput, HTMLStencilElement {}
+  var HTMLAuiInputElement: {
+    prototype: HTMLAuiInputElement;
+    new (): HTMLAuiInputElement;
+  };
+
   interface HTMLAuiPaperElement extends Components.AuiPaper, HTMLStencilElement {}
   var HTMLAuiPaperElement: {
     prototype: HTMLAuiPaperElement;
     new (): HTMLAuiPaperElement;
   };
 
-  interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {}
-  var HTMLMyButtonElement: {
-    prototype: HTMLMyButtonElement;
-    new (): HTMLMyButtonElement;
-  };
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLAuiTextElement extends Components.AuiText, HTMLStencilElement {}
+  var HTMLAuiTextElement: {
+    prototype: HTMLAuiTextElement;
+    new (): HTMLAuiTextElement;
   };
   interface HTMLElementTagNameMap {
     'aui-button': HTMLAuiButtonElement;
+    'aui-collapse': HTMLAuiCollapseElement;
+    'aui-input': HTMLAuiInputElement;
     'aui-paper': HTMLAuiPaperElement;
-    'my-button': HTMLMyButtonElement;
-    'my-component': HTMLMyComponentElement;
+    'aui-text': HTMLAuiTextElement;
   }
 }
 
@@ -86,33 +87,28 @@ declare namespace LocalJSX {
     'type'?: 'button' | 'reset' | 'submit';
     'variant'?: 'outlined' | 'contained';
   }
-  interface AuiPaper {
-    'defaultStyle'?: 'card';
-  }
-  interface MyButton {
+  interface AuiCollapse {
+    'color'?: string;
+    'description'?: string;
     'label'?: string;
-    'onOnClick'?: (event: CustomEvent<any>) => void;
+    'onOnToggle'?: (event: CustomEvent<any>) => void;
+    'width'?: string;
   }
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface AuiInput {}
+  interface AuiPaper {
+    'defaultStyle'?: string;
+  }
+  interface AuiText {
+    'label'?: string;
+    'variant'?: 'h1' | 'h2' | 'h3' | 'h4' | 'headline' | 'title' | 'subheading' | 'body2' | 'body1' | 'caption';
   }
 
   interface IntrinsicElements {
     'aui-button': AuiButton;
+    'aui-collapse': AuiCollapse;
+    'aui-input': AuiInput;
     'aui-paper': AuiPaper;
-    'my-button': MyButton;
-    'my-component': MyComponent;
+    'aui-text': AuiText;
   }
 }
 
@@ -123,9 +119,10 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'aui-button': LocalJSX.AuiButton & JSXBase.HTMLAttributes<HTMLAuiButtonElement>;
+      'aui-collapse': LocalJSX.AuiCollapse & JSXBase.HTMLAttributes<HTMLAuiCollapseElement>;
+      'aui-input': LocalJSX.AuiInput & JSXBase.HTMLAttributes<HTMLAuiInputElement>;
       'aui-paper': LocalJSX.AuiPaper & JSXBase.HTMLAttributes<HTMLAuiPaperElement>;
-      'my-button': LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
-      'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+      'aui-text': LocalJSX.AuiText & JSXBase.HTMLAttributes<HTMLAuiTextElement>;
     }
   }
 }

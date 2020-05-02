@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property       | Attribute       | Description | Type     | Default     |
-| -------------- | --------------- | ----------- | -------- | ----------- |
-| `defaultStyle` | `default-style` |             | `"card"` | `undefined` |
+| Property       | Attribute       | Description | Type     | Default  |
+| -------------- | --------------- | ----------- | -------- | -------- |
+| `defaultStyle` | `default-style` |             | `string` | `'card'` |
 
 
 ----------------------------------------------

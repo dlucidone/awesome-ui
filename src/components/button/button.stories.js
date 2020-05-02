@@ -16,7 +16,7 @@ export default {
 
 const label = text("label", "Label");
 const btnAction = action("click");
-export const defaultBtn = () => {
+export const simple = () => {
   return <aui-button label={label} onClick={btnAction}></aui-button>;
 };
 

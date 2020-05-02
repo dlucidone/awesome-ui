@@ -12,9 +12,9 @@ export class Collapse {
 
   @Event() onToggle: EventEmitter;
 
-  @Prop() label: string;
+  @Prop() label: string = "Title";
 
-  @Prop() description: string;
+  @Prop() description: string = "Description";
 
   @Prop() width: string;
 
@@ -31,12 +31,12 @@ export class Collapse {
       <div class="accordions">
         <div class="accordion-item">
           <div class={`accordion-title ${this.toggle ? 'active-title' : ''}`} data-tab="item1" onClick={() => this.toggleComponent()}>
-            <h2>Accordion 1 {this.toggle ? <span>&#9650;</span> : <span>&#9660;</span>}</h2>
+            <h2>{this.label} {this.toggle ? <span>&#9650;</span> : <span>&#9660;</span>}</h2>
           </div>
           <div  class={`accordion-content ${this.toggle ? 'active' : ''}`} id="item1">
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-          </p>
+              {this.description}
+              </p>
           </div>
         </div>
       </div>

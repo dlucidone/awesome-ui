@@ -2,8 +2,20 @@
 
 # Awesome UI Web Components 
 
+Show me in action
+
+```
+https://dlucidone.github.io/awesome-ui
+```
+
+How to use - 
+
+``` 
+npm i awesome-ui-components
+```
 
 
-## License
+
+### License
 
 MIT - see [LICENSE](./LICENSE) for details.

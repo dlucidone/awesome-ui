@@ -1,9 +1,9 @@
 {
   "entries": [
     "components/button/button.js",
-    "components/collapse/collapse.js",
     "components/input/input.js",
     "components/paper/paper.js",
+    "components/collapse/collapse.js",
     "components/text/text.js"
   ],
   "compiler": {

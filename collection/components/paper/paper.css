@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: var(--paper-shadow, 0 2px 10px 0 rgba(0, 0, 0, 0.16));
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #ffffff;
+}

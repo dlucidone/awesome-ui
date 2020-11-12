@@ -11,7 +11,69 @@ How to use -
 npm i awesome-ui-components
 ```
 
+## Components - 
 
+### Button
+
+```
+ <aui-button label="Button" onClick={btnAction} color="primary"></aui-button>
+ <aui-button label="Button" onClick={btnAction} color="accent"></aui-button>
+ <aui-button label="Button" onClick={btnAction} color="light"></aui-button>
+ <aui-button label="Button" onClick={btnAction} shape="round"></aui-button>
+ <aui-button label="Button" onClick={btnAction} color="square"></aui-button>
+ <aui-button label="Button" onClick={btnAction} size="small"color="square"></aui-button>
+ <aui-button label="Button" onClick={btnAction} size="large"color="square"></aui-button>
+ <aui-button label="Button" onClick={btnAction} variant="outlined"></aui-button>
+ <aui-button label="Button" onClick={btnAction}></aui-button>
+```
+
+### Collapse
+
+```
+<aui-collapse
+      width="100%"
+      label="Bacon Ipsum"
+      description="Bacon ipsum dolor amet pork chop sausage turkey spare ribs ham hock cupim pork loin capicola bacon ham filet mignon prosciutto boudin turducken. Shank corned beef burgdoggen jowl ribeye. Ham pork pastrami rump meatball buffalo venison andouille picanha fatback pork loin.">
+</aui-collapse>
+```
+
+### Paper
+
+```
+ <aui-paper>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget
+        sagittis eros. Duis varius interdum molestie. Quisque at tempor est, sed
+        accumsan velit. Cras ac pretium mi. Nullam facilisis ante erat, sit amet
+        consequat nisl dapibus sed. Pellentesque lacinia semper lacus, a
+        bibendum magna dapibus eget. Aliquam consequat laoreet mi, eu ultrices
+        dolor laoreet sed. Mauris at erat ex. Sed non lorem vitae orci suscipit
+        viverra vel eget ligula. Cras porttitor velit a fringilla commodo. Ut
+        luctus ut nisl sit amet tincidunt
+      </p>
+  </aui-paper>
+```
+
+### Text
+
+```
+ <aui-text label={"Typography"} variant="h1"/>
+ <aui-text label={"Typography"} variant="h2"/>
+ <aui-text label={"Typography"} variant="h3"/>
+ <aui-text label={"Typography"} variant="h4"/>
+ <aui-text label={"Typography"} variant="headline"/>
+ <aui-text label={"Typography"} variant="title"/>
+ <aui-text label={"Typography"} variant="subheading"/>
+ <aui-text label={"Typography"} variant="body2"/>
+ <aui-text label={"Typography"} variant="body1"/>
+ <aui-text label={"Typography"} variant="caption"/>
+```
+
+### Input
+
+```
+ <aui-input></aui-input>
+```
 
 ### License
 
